@@ -52,3 +52,16 @@ public class customers { ... }
 ```SQL
 select cast(COL_NAME as real) from TABLE_NAME
 ```
+
+## `Bootstrap` Collapsible Panel
+
+```HTML
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <a href="#filters-body" data-toggle="collapse">Filters</a>
+    </div>
+    <div id="filters-body" class="panel-collapse collapse in">
+      <div class="panel-body">Body</div>
+    </div>
+</div>
+```
