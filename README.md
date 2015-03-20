@@ -71,3 +71,25 @@ select cast(COL_NAME as real) from TABLE_NAME
     </div>
 </div>
 ```
+
+## Flask
+
+### Display messages queue'd up with `flash()`
+
+```Jinja
+{% with msgs = get_flashed_messages(with_categories=True) %}
+  {% if msgs %}
+    {% for category, msg in msgs %}
+      {% if category == "error" %}
+        <div class="alert alert-danger"><strong>ERROR</strong>: {{ msg }}</div>
+      {% elif category == "success" %}
+        <div class="alert alert-success"><strong>SUCCESS</strong>: {{ msg }} </div>
+      {% elif category == "info" %}
+        <div class="alert alert-info"><strong>INFO</strong>: {{ msg }} </div>
+      {% else %}
+        <div class="alert alert-default">{{ msg }} </div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+```
