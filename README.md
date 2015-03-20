@@ -1,7 +1,9 @@
 # Progbits
 > Small snippets of just enough code to get something to work
 
-## `C#` Sorted list, and iterating through them 
+## `C#` 
+
+### Sorted list, and iterating through them 
 
 ```C#
 int value = 1;
@@ -14,7 +16,7 @@ foreach(KeyValuePair<string,int> kv in sl)
 }
 ```
 
-## `C#` Get underlying type of a Nullable Object
+### Get underlying type of a Nullable Object
 
 http://stackoverflow.com/questions/5644587/find-type-of-nullable-properties-via-reflection
 
@@ -22,7 +24,7 @@ http://stackoverflow.com/questions/5644587/find-type-of-nullable-properties-via-
 propertyType = Nullable.GetUnderlyingType(propertyType) ?? propertyType
 ```
 
-## `C#` `.toString()` format specifiers
+### `.toString()` format specifiers
 
 http://msdn.microsoft.com/en-us/library/0c899ak8.aspx
 
@@ -32,7 +34,7 @@ val.toString("#.##"); // prints 1.2
 val.toString("0.00"); // prints 1.20
 ```
 
-## `C#` Attribute classes
+### Attribute classes
 
 http://www.dotnetperls.com/attribute
 
@@ -47,13 +49,17 @@ public class index { ... }
 public class customers { ... }
 ```
 
-## `SQLServer` Get a whole number if no decimal points are available
+## `SQLServer` 
+
+### Get a whole number if no decimal points are available
 
 ```SQL
 select cast(COL_NAME as real) from TABLE_NAME
 ```
 
-## `Bootstrap` Collapsible Panel
+## `Bootstrap` 
+
+### Collapsible Panel
 
 ```HTML
 <div class="panel panel-default">
