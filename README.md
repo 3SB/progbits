@@ -1,7 +1,7 @@
 # Progbits
 > Small snippets of just enough code to get something to work
 
-## C#
+## C Sharp
 
 ### Sorted list, and iterating through them 
 
