@@ -1,7 +1,7 @@
 # Progbits
 > Small snippets of just enough code to get something to work
 
-## `C#` 
+## C#
 
 ### Sorted list, and iterating through them 
 
@@ -49,7 +49,7 @@ public class index { ... }
 public class customers { ... }
 ```
 
-## `SQLServer` 
+## SQLServer
 
 ### Get a whole number if no decimal points are available
 
@@ -57,7 +57,7 @@ public class customers { ... }
 select cast(COL_NAME as real) from TABLE_NAME
 ```
 
-## `Bootstrap` 
+## Bootstrap 
 
 ### Collapsible Panel
 
