@@ -93,3 +93,11 @@ select cast(COL_NAME as real) from TABLE_NAME
   {% endif %}
 {% endwith %}
 ```
+
+## Mongo
+
+### Update all documents in a collection adding some default values
+
+```mongo
+db.<collection>.update({},{$set: {"k1":"v1", "k2":"v2"}}, {multi:true})
+```
