@@ -101,3 +101,26 @@ select cast(COL_NAME as real) from TABLE_NAME
 ```mongo
 db.<collection>.update({},{$set: {"k1":"v1", "k2":"v2"}}, {multi:true})
 ```
+
+### Update document, arrays of subdocument 
+
+```db.<collection>.find({},{"main_doc":1,"sub_doc":1})
+.forEach(function(doc)
+{    
+    var sub_document_array = doc.sub_document_array;
+    for(i=0;i<sub_document_array.length;i++){
+        sub_document_array[i].title = sub_document_array[i].title.trim();
+        var sub_documents_sub_document_array = sub_document_array[i].types;
+        if(sub_documents_sub_document_array != null && sub_documents_sub_document_array.length > 0){
+           for(j=0;j<sub_documents_sub_document_array.length;j++){
+            sub_documents_sub_document_array[j].name = sub_documents_sub_document_array[j].name.trim();   
+               
+            }
+        }
+    }
+    db.categories.update(
+    {"_id" : doc._id},
+    {"$set":{"main_doc": doc.key1.trim(),"sub_doc":sub_document_array}}
+    );
+       
+})```
