@@ -104,7 +104,8 @@ db.<collection>.update({},{$set: {"k1":"v1", "k2":"v2"}}, {multi:true})
 
 ### Update document, arrays of subdocument 
 
-```db.<collection>.find({},{"main_doc":1,"sub_doc":1})
+```
+ db.<collection>.find({},{"main_doc":1,"sub_doc":1})
 .forEach(function(doc)
 {    
     var sub_document_array = doc.sub_document_array;
