@@ -3,7 +3,7 @@
 
 ## C Sharp
 
-### `DataColumn`s inside `DataTables` are case insensitive and can contain spaces
+### `DataColumn`s inside `DataTable`s are case insensitive and can contain spaces
 
 ```C#
 DataTable dt = new DataTable();
