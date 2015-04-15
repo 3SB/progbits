@@ -3,6 +3,19 @@
 
 ## C Sharp
 
+### `DataColumn`s inside `DataTables` are case insensitive and can contain spaces
+
+```C#
+DataTable dt = new DataTable();
+dt.Columns.Add(new DataColumn("Hello World", typeof(string)));
+
+DataRow dr = dt.NewRow();
+dr["HeLLO WORLd"] = "Hello"; // Note the case
+dt.Rows.Add(dr); // Adds the row to table
+
+MessageBox.Show(dt.Columns.Contains("hELLo wORld").ToString()); // Shows "true"
+```
+
 ### Sorted list, and iterating through them 
 
 ```C#
