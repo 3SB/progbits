@@ -3,6 +3,36 @@
 
 ## C Sharp
 
+### Extension methods
+
+Extension methods are a way to extend certain `type`s without hampering with the `type`'s code. Suppose we want to add a `isValidEmail` method on the `string` type itself, you'd do it this way: 
+
+```C#
+namespace foo
+{
+    public static class CustomExtensions
+    {
+        public static bool isValidEmail(this string instance)
+        {
+            if (instance.Contains('@'))
+                return true;
+            else
+                return false;
+        }
+    }
+}
+```
+
+And in another class, import the namespace and you're good to go!!!! 
+
+```C#
+using foo;
+
+"foo.bar@gmail.com".isValidEmail() // Returns true
+```
+
+We just added a new function to the `string` type without modifying the `string` class itself. 
+
 ### Arguments to functions can be named
 
 ```C#
