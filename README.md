@@ -3,6 +3,24 @@
 
 ## C Sharp
 
+### Arguments to functions can be named
+
+```C#
+private void greet(string name, int times)
+{
+    for (int i = 0; i < times; i++)
+    {
+        Console.WriteLine("Hello " + name);
+    }
+}
+
+greet(
+  name: "Shrayas",
+  times: 5
+) // prints "Hello Shrayas" 5 times.
+
+```
+
 ### `DataColumn`s inside `DataTable`s are case insensitive and can contain spaces
 
 ```C#
