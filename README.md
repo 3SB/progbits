@@ -188,17 +188,6 @@ db.<collection>.update({},{$set: {"k1":"v1", "k2":"v2"}}, {multi:true})
 
 ### How to check if a sub document that has array has any value
 
-```
-    db.<collection>.find({'subdocument':{$size:1})
-```
-
-
-## Python
-
-### Fetch the ID required for IMAP processing from a Gmail Message-ID field
-
-```python
-id = "<CAEkH89NkEPHhbqdXUYRq4=MKagkgrAK9dqw+A7U-yNyzGFe6hA@mail.gmail.com>"
-c.search(None, r'(X-GM-RAW "rfc822msgid:%s")' % id)
-('OK', ['3'])
+```javascript
+db.<collection>.find({'subdocument':{$size:1})
 ```
