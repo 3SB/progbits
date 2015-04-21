@@ -188,7 +188,9 @@ db.<collection>.update({},{$set: {"k1":"v1", "k2":"v2"}}, {multi:true})
 
 ### How to check if a sub document that has array has any value
 
-```db.<collection>.find({'subdocument':{$size:1})```
+```
+    db.<collection>.find({'subdocument':{$size:1})
+```
 
 
 ## Python
