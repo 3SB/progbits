@@ -191,3 +191,12 @@ db.<collection>.update({},{$set: {"k1":"v1", "k2":"v2"}}, {multi:true})
 ```javascript
 db.<collection>.find({'subdocument':{$size:1})
 ```
+
+## Shell
+
+### In a file, print all lines from starting till a match is reached
+
+```shell
+$ sed -n '1/pattern/p' <filename>
+```
+```
