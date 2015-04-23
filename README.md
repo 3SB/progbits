@@ -199,4 +199,3 @@ db.<collection>.find({'subdocument':{$size:1})
 ```shell
 $ sed -n '1/pattern/p' <filename>
 ```
-```
