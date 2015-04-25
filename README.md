@@ -192,6 +192,27 @@ db.<collection>.update({},{$set: {"k1":"v1", "k2":"v2"}}, {multi:true})
 db.<collection>.find({'subdocument':{$size:1})
 ```
 
+### How to find duplicate entries in a collection based on a key
+
+```javascript
+var duplicates = {};
+db.catalog.find()
+.forEach(function(doc)
+{
+
+        var title = doc.title;
+        if(duplicates[title] != null){
+            var count = duplicates[title];
+            count = count + 1;
+            duplicates[title] = count;
+        }else{
+            duplicates[title] = 1;
+        }
+    
+});
+```
+
+
 ## Shell
 
 ### In a file, print all lines from starting till a match is reached
