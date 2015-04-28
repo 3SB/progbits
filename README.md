@@ -248,3 +248,20 @@ db.catalog.find()
 ```shell
 $ sed -n '1/pattern/p' <filename>
 ```
+
+## Racket 
+
+### Comparing `struct`s with the `equals?` predicate
+
+Structures (user defined) in Racket are defined to be "opaque" by default. Opaque structures cannot be compared using the `equals?` precicate. This is because for an opaque structure, `equals?` works on the instance IDs. In order to do such comparisons, the `struct` must be made transparent
+
+```racket
+(struct employee (name age))
+(define bob (employee "Bob" 25))
+(equals? bob (employee "Bob" 25)) ; Returns false. Default struct type is opaque
+
+(struct employee-trans (name age)
+        #:transparent)
+(define rob (employee "Rob" 24))
+(equals? rob (employee "Rob" 24)) ; Returns true
+```
