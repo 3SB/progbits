@@ -140,6 +140,18 @@ public class customers { ... }
 
 ## SQLServer
 
+### Using `row_number()` 
+
+```SQL
+select row_number() over (partition by d.id order by e.name) as id, e.name, d.name 
+from employee as e
+inner join dept as d on e.id = d.empid
+```
+
+[Documentation](https://msdn.microsoft.com/en-us/library/ms186734.aspx)
+
+This would take all employees belonging to a particular department, group them up and assign row numbers to them ordered by their names. 
+
 ### Get a whole number if no decimal points are available
 
 ```SQL
