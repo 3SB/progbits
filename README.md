@@ -195,6 +195,21 @@ select cast(COL_NAME as real) from TABLE_NAME
 {% endwith %}
 ```
 
+## JQuery
+
+### Get an object containing all elements within the form
+
+```javascript
+$("#some-form").submit(function(e) {
+    var formData = $(this).serializeArray().reduce(function(ac, curr) {
+        ac[curr.name] = curr.value;
+        return ac;
+    }, {});
+    
+    console.log(formData);
+});
+```
+
 ## Mongo
 
 ### Update all documents in a collection adding some default values
