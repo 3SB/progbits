@@ -210,6 +210,17 @@ $("#some-form").submit(function(e) {
 });
 ```
 
+### Toggling a set of checkboxes to follow one checkbox
+
+```javascript
+$(document.body).on("click", "#select-all-checkbox", function() {
+    var state = this.checked;
+    $(".checkbox").each(function(key, val) {
+        this.checked = state;
+    });
+});
+```
+
 ## Mongo
 
 ### Update all documents in a collection adding some default values
