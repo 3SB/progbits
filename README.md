@@ -221,6 +221,15 @@ $(document.body).on("click", "#select-all-checkbox", function() {
 });
 ```
 
+### Make a bootstrap modal undismissable 
+
+```javascript
+$('#myModal').modal({
+  backdrop: 'static',
+  keyboard: false
+})
+```
+
 ## Mongo
 
 ### Update all documents in a collection adding some default values
