@@ -197,6 +197,16 @@ select cast(COL_NAME as real) from TABLE_NAME
 
 ## JQuery
 
+### Extract values from a number of text boxes whose ids follow a pattern and return a dictionary
+
+```javascript
+[1,2,3,4,5,6,7,8,9,10,11,12].reduce(function(prev, curr) {
+  var classStrength = $("#foo-" + curr).val();
+  prev["foo" + curr] = classStrength;
+  return prev;
+}, {})
+```
+
 ### Get an object containing all elements within the form
 
 ```javascript
