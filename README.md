@@ -3,6 +3,35 @@
 
 ## C Sharp
 
+### Connecting to a DB
+
+#### SQLite
+
+    Data Source=C:\Path\To\Db\File.db
+    
+#### SQL Server
+
+    server=<server>;user id=<username>;password=<password>;database=<database>
+    
+### Connecting tp DB
+
+Since everything inherits the `DBConnection` class of C#, connecting to a database it pretty standard
+
+```C#
+T conn = new T("<connection string>");
+conn.open();
+conn.close();
+```
+
+Where `T` is the class that can be used to connect to the db of your choice. 
+
+
+| DB  | Class |
+| ------------- | ------------- |
+| SQLite  | `SQLiteConnection`  |
+| SQL Server  | `SQLConnection`  |
+
+
 ### Indexed properties
 
 ```C#
