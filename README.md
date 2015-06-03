@@ -3,6 +3,14 @@
 
 ## C Sharp
 
+### Timing a statement's execution
+
+```C#
+DateTime start = DateTime.Now;
+// statements 
+Console.WriteLine(DateTime.Now.Subtract(start).TotalSeconds);
+```
+
 ### Connecting to a DB
 
 #### SQLite
