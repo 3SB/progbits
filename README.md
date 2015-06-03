@@ -3,6 +3,21 @@
 
 ## C Sharp
 
+### Anonymous Types
+
+```C#
+// Anonymous Objects
+var emp = new { Name = "Foo", Id = 1 };
+
+// Anonymous Lists
+var nums = new[] { 1, 2, 3 };
+var letters = new[] { 'a', 'b', 'c' };
+
+// Anonymous Lists of Anonymous Objects
+var emps = new[] { new { Name = "Foo", Id = 1 }, new { Name = "Bar", Id = 2 } };
+
+```
+
 ### Timing a statement's execution
 
 ```C#
