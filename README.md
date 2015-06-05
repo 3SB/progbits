@@ -36,7 +36,7 @@ DateTime start = DateTime.Now;
 Console.WriteLine(DateTime.Now.Subtract(start).TotalSeconds);
 ```
 
-### Connecting to a DB
+### Database Connections
 
 #### SQLite
 
@@ -46,7 +46,7 @@ Console.WriteLine(DateTime.Now.Subtract(start).TotalSeconds);
 
     server=<server>;user id=<username>;password=<password>;database=<database>
     
-### Connecting tp DB
+### Connecting to a DB
 
 Since everything inherits the `DBConnection` class of C#, connecting to a database it pretty standard
 
