@@ -3,6 +3,16 @@
 
 ## C Sharp
 
+### `DataTable` initialization
+
+```C#
+DataTable dt = new DataTable
+{
+    Columns = { { "id", typeof(int) }, { "name", typeof(string) } },
+    Rows = { { 1, "foo" }, { 2, "bar" }, { 3, "baz" } }
+};
+```
+
 ### Anonymous Types
 
 ```C#
