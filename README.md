@@ -64,35 +64,6 @@ Where `T` is the class that can be used to connect to the db of your choice.
 | SQLite  | `SQLiteConnection`  |
 | SQL Server  | `SQLConnection`  |
 
-
-### Indexed properties
-
-```C#
-SortedList<string, int?> _fields;
-
-public PropertyLearn()
-{
-    _fields = new SortedList<string, int?>();
-    _fields.Add("hello", null);
-}
-
-public object this[string fieldname]
-{
-    get
-    {
-        if (_fields.ContainsKey(fieldname))
-            return _fields[fieldname];
-        else
-            return null;
-    }
-    set
-    {
-        if (_fields.ContainsKey(fieldname))
-            _fields[fieldname] = Convert.ToInt32(value);
-    }
-}
-```
-
 ### Extension methods
 
 Extension methods are a way to extend certain `type`s without hampering with the `type`'s code. Suppose we want to add a `isValidEmail` method on the `string` type itself, you'd do it this way: 
