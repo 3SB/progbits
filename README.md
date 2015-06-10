@@ -3,6 +3,25 @@
 
 ## C Sharp
 
+### Lazy Sequences with `IEnumerable` and `yield`
+
+```C#
+private IEnumerable<int> infiniteList()
+{
+    int i = 0;
+    while (true)
+    {
+        i++;
+        yield return i;
+    }
+}
+
+foreach (int i in infiniteList().Take(10))
+    Console.WriteLine(i);
+```
+
+Even though `infiniteList()` at first sight would `return` an infinite list, that isn't the case. `yield` yields a value and pauses the execution there
+
 ### `DataTable` initialization
 
 ```C#
