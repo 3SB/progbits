@@ -3,6 +3,20 @@
 
 ## C Sharp
 
+### Variable arguments
+
+```C#
+void doSomething(params string[] args) 
+{
+    // use args
+}
+
+doSomething("hello");
+doSomething("hello", "world");
+```
+
+[MSDN](https://msdn.microsoft.com/en-us/library/w5zay9db.aspx)
+
 ### Lazy Sequences with `IEnumerable` and `yield`
 
 ```C#
