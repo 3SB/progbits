@@ -388,3 +388,11 @@ Structures (user defined) in Racket are defined to be "opaque" by default. Opaqu
 (define rob (employee "Rob" 24))
 (equals? rob (employee "Rob" 24)) ; Returns true
 ```
+
+## Java
+
+### Check if a 64bit vm is installed
+
+```
+$ java -d64 -version
+```
