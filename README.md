@@ -204,6 +204,15 @@ public class index { ... }
 public class customers { ... }
 ```
 
+## Python
+
+### Getting back and ID of an inserted row with Postgres and Psycopg2
+
+```Python
+cursor.execute("INSERT INTO .... RETURNING id")
+id_of_new_row = cursor.fetchone()[0]
+```
+
 ## Postgresql 
 
 ### Create a table with a auto increment column
