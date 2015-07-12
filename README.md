@@ -206,7 +206,7 @@ public class customers { ... }
 
 ## Python
 
-### Getting back and ID of an inserted row with Postgres and Psycopg2
+### Getting back the ID of an inserted row with Postgres and Psycopg2
 
 ```Python
 cursor.execute("INSERT INTO .... RETURNING id")
@@ -215,7 +215,7 @@ id_of_new_row = cursor.fetchone()[0]
 
 ## Postgresql 
 
-### Create a table with a auto increment column
+### Create a table with an auto increment column
 
 ```SQL
 CREATE TABLE employee
