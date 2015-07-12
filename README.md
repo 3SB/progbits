@@ -204,6 +204,18 @@ public class index { ... }
 public class customers { ... }
 ```
 
+## Postgresql 
+
+### Create a table with a auto increment column
+
+```SQL
+CREATE TABLE employee
+(
+    id    SERIAL PRIMARY KEY,
+    name  VARCHAR(40) not null,
+);
+```
+
 ## SQLServer
 
 ### Using `row_number()` 
