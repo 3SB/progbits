@@ -417,3 +417,13 @@ Structures (user defined) in Racket are defined to be "opaque" by default. Opaqu
 ```
 $ java -d64 -version
 ```
+
+## Virtualbox 
+
+### Mounting a shared folder on Ubuntu guest
+
+```
+$ sudo mount -t vboxsf <shared_folder_name> <shared_folder_mount_path>
+```
+
+`shared_folder_mount_path` should be a path on the Ubuntu guest OS that exists. 
