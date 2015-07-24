@@ -3,6 +3,14 @@
 
 ## C Sharp
 
+### Get a dictionary from an enum
+
+```C#
+Enum.GetValues(typeof(BillingTypes))
+  .Cast<BillingTypes>()
+  .ToDictionary(k => (int)k, v => v.ToString());
+```
+
 ### Variable arguments
 
 ```C#
