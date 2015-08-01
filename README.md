@@ -233,6 +233,12 @@ CREATE TABLE employee
 );
 ```
 
+### Dump only schema
+
+```
+$ pg_dump --no-owner -U <username> -s <db name> 
+```
+
 ## SQLServer
 
 ### Using `row_number()` 
