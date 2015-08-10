@@ -296,7 +296,14 @@ select cast(COL_NAME as real) from TABLE_NAME
 {% endwith %}
 ```
 
-## JQuery
+## JQuery & JS
+
+### Clear an `input type=file`
+
+```javascript
+var fileControl = $("#book-coverimage-file");
+fileControl.replaceWith(fileControl = fileControl.clone(true));
+```
 
 ### Extract values from a number of text boxes whose ids follow a pattern and return a dictionary
 
