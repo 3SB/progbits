@@ -239,6 +239,12 @@ CREATE TABLE employee
 $ pg_dump --no-owner -U <username> -s <db name> 
 ```
 
+### Restore a tar backup
+
+```
+$ pg_restore -c -i -U postgres -d <db name> -v "<filename>" -W
+```
+
 ## SQLServer
 
 ### Using `row_number()` 
