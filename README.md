@@ -223,6 +223,12 @@ id_of_new_row = cursor.fetchone()[0]
 
 ## Postgresql 
 
+### Insert Junk data 
+
+```SQL
+SELECT generate_series(1,1000000) AS id, md5(random()::text) AS descr;
+```
+
 ### Create a table with an auto increment column
 
 ```SQL
