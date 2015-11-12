@@ -87,6 +87,10 @@ Console.WriteLine(DateTime.Now.Subtract(start).TotalSeconds);
 
     server=<server>;user id=<username>;password=<password>;database=<database>
     
+#### MySql
+
+    server=<server>;uid=<username>;pwd=<password>;database=<database>;
+    
 ### Connecting to a DB
 
 Since everything inherits the `DBConnection` class of C#, connecting to a database it pretty standard
@@ -104,6 +108,7 @@ Where `T` is the class that can be used to connect to the db of your choice.
 | ------------- | ------------- |
 | SQLite  | `SQLiteConnection`  |
 | SQL Server  | `SQLConnection`  |
+| MySql | `MySqlConnection` |
 
 ### Extension methods
 
