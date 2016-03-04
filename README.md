@@ -250,10 +250,24 @@ CREATE TABLE employee
 $ pg_dump --no-owner -U <username> -s <db name> 
 ```
 
-### Restore a tar backup
+### Dump DB and Schema to tar file
 
 ```
-$ pg_restore -c -i -U postgres -d <db name> -v "<filename>" -W
+$ pg_dump -F t -U postgres -w <db name> > <filename>.tar
+```
+
+### Restore a tar backup
+
+*Don't clean DB*
+
+```
+$ pg_restore -U postgres -d <db name> -w <filename>.tar
+```
+
+*Clean DB*
+
+```
+$ pg_restore -c -U postgres -d <db name> -w <filename>.tar
 ```
 
 ## SQLServer
